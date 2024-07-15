@@ -1,0 +1,105 @@
+<!Doctype html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+.mainbox{
+    display:flex;
+	justify-content:space-evenly;
+	text-align:center;
+	flex-wrap:wrap;
+	}
+   .btn{
+       position:relative;
+	   left:30px;
+	   top:20px;
+	 }
+	  .mainbox img:hover{
+	      transform:scale(0.9);
+		}
+		 body{
+	 background-color:pink;
+	 }
+</style>
+</head>
+<body>
+<form>
+<a href="kids wear.html"><button class="btn btn-outline-info">MENU</a></button>
+   <form action="">
+   <center> <input  type="number" id="minvalue">
+    <input  type="number" id="maxvalue">
+   <input  type="button" value="filter" class="submit">
+	</form></br></br></br>
+  <h1 id="as"> KIDS TOP WEAR</h1></center></br></br>
+  <div class="container">
+   <div class="mainbox">
+     <div class="box" data-value="600">
+    <img src="pic73.jpg"width="300px" height="500px">
+	<h1>T-SHIRTS</h1>
+	<p> PRICE:600</p>
+	</div>
+	<div class="box" data-value="800">
+   <img src="pic74.jpg" width="300px" height="500px">
+   <h1> T-SHIRT</h1>
+	<p> PRICE:800</p>
+   </div>
+   <diV class="box" data-value="1000">
+   <img src="pic75.jpg" width="300px" height="500px">
+   <h1> PAIR SHIRTS</h1>
+	<p> PRICE:1000</p>
+   </div>
+  <div class="box" data-value="1200">
+   <img src="pic76.jpg" width="300px" height="500px">
+   <h1>LYMIO SHIRT</h1>
+	<p> PRICE:1200</p>
+   </div>
+   <diV class="box" data-value="1400">
+   <img src="pic78.jpg" width="300px" height="500px">
+   <h1>PRIENTED JERSEY</h1>
+	<p> PRICE:1400</p>
+	</div>
+  <div class="box" data-value="1600">
+  <img src="pic77.jpg" width="300px" height="500px">
+   <h1> Pink Blouson Top</h1>
+	<p> PRICE:1600</p>
+  </div>
+  <div class="box" data-value="1800">
+   <img src="pic79.jpg" width="300px" height="500px">
+   <h1>COTTON TOP</h1>
+	<p> PRICE:1800</p>
+   </div>
+   <diV class="box" data-value="2000">
+   <img src="pic80.jpg" width="300px" height="500px">
+   <h1>  5-PACK-COTTON</h1>
+	<p> PRICE:2000</p>
+	</div>
+  <div class="box" data-value="2200">
+  <img src="pic81.jpg" width="300px" height="500px">
+   <h1>KIDS PARTY WEAR</h1>
+	<p> PRICE:2200</p>
+  </div>
+  </div>
+  </div>
+  <script>
+     subBtn=document.querySelector('.submit');
+        let datavalue=document.querySelectorAll('.box');
+        datavalue.forEach(function(item){
+            subBtn.addEventListener('click',function(){
+                let min=document.getElementById("minvalue").value;
+                let max=document.getElementById("maxvalue").value;
+                minPI=parseInt(min);
+                maxPI=parseInt(max);
+                let dataitems=item.getAttribute('data-value');
+                if(dataitems>=minPI&&dataitems<=maxPI){
+                    item.style.display="block";
+                }
+                else{
+                    item.style.display="none"
+                }
+            })
+        })
+  </script>  
+</body>
